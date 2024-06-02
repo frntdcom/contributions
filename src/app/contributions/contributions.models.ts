@@ -5,7 +5,6 @@ export type DailyContribution = {
 
 export type WeeklyContributionsGrid = DailyContribution[][];
 
-
 export type Contributions = {
   year: number;
 
