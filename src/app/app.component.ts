@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ContributionsComponent } from "./contributions/contributions.component";
-import {Contributions} from "./contributions/contributions.models";
+import { Contributions } from "./contributions/contributions.models";
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,7 @@ export class AppComponent {
   data: Contributions = this.generateContributionsData();
 
   generateContributionsData(year = 2020) {
-    const dataObject:any = {};
+    const dataObject: Contributions = {};
     const startDate = new Date(year, 0, 1);
 
     for (let i = 0; i < 366; i++) {
