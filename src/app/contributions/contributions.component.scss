@@ -1,0 +1,27 @@
+:host {
+  --border: 1px solid #000;
+  --border-radius: 5px;
+  font-family: system-ui, sans-serif;
+}
+
+.contributions {
+  border: var(--border);
+  padding: 5px;
+  width: fit-content;
+  border-radius: var(--border-radius);
+
+  .contribution {
+    height: 13px;
+    min-width: 13px;
+    max-width: 43px;
+    border-radius: var(--border-radius);
+    border: var(--border);
+  }
+}
+
+table {
+  th, td {
+    padding: 0;
+    font-size: 12px;
+  }
+}

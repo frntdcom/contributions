@@ -1,0 +1,37 @@
+<div class="contributions">
+  <table>
+    <thead>
+    <tr>
+      <th></th>
+      @for (row of theadRows; track $index) {
+        <td [colSpan]="row.colspan">
+          <span>{{ row.name }}</span>
+        </td>
+      }
+    </tr>
+    </thead>
+
+    <tbody>
+      @for (dayOfWeek of daysOfWeek; let dayOfWeekIndex = $index; track dayOfWeekIndex) {
+        <tr>
+          <td>{{ dayOfWeek }}</td>
+          @for (contributionDay of weeklyContributionsGrid()[dayOfWeekIndex];
+            let contributionDayIndex = $index;
+            track contributionDayIndex) {
+
+            @if (contributionDay) {
+              <td appContributionA11y
+                  [attr.data-row]="dayOfWeekIndex"
+                  [attr.data-column]="contributionDayIndex"
+                  [appContributionBgColor]="contributionDay.amount"
+                  class="contribution">
+              </td>
+            } @else {
+              <td></td>
+            }
+          }
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
